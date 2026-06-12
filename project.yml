@@ -1,0 +1,33 @@
+name: BlackHoleSaver
+options:
+  bundleIdPrefix: dev.s13k
+  deploymentTarget:
+    macOS: "14.0"
+targets:
+  BlackHoleSaver:
+    type: bundle
+    platform: macOS
+    sources:
+      - BlackHoleSaverView.swift
+      - Shaders.metal
+      - path: thumbnail.png
+        buildPhase: resources
+      - path: thumbnail@2x.png
+        buildPhase: resources
+    info:
+      path: Info.plist
+      properties:
+        CFBundleName: BlackHoleSaver
+        NSPrincipalClass: BlackHoleSaverView
+        NSHumanReadableCopyright: ""
+    settings:
+      base:
+        WRAPPER_EXTENSION: saver
+        PRODUCT_BUNDLE_IDENTIFIER: dev.s13k.BlackHoleSaver
+        COMBINE_HIDPI_IMAGES: false
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "Apple Development"
+        DEVELOPMENT_TEAM: 8PFT9GXT36
+        ENABLE_HARDENED_RUNTIME: true
+        OTHER_CODE_SIGN_FLAGS: "--timestamp"
+        SWIFT_VERSION: "5.0"
