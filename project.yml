@@ -31,3 +31,23 @@ targets:
         ENABLE_HARDENED_RUNTIME: true
         OTHER_CODE_SIGN_FLAGS: "--timestamp"
         SWIFT_VERSION: "5.0"
+  BlackHoleTimer:
+    type: application
+    platform: macOS
+    sources:
+      - BlackHoleTimer
+    info:
+      path: BlackHoleTimer/Info.plist
+      properties:
+        CFBundleName: BlackHoleTimer
+        LSUIElement: true
+        NSHumanReadableCopyright: ""
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.s13k.BlackHoleTimer
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "Apple Development"
+        DEVELOPMENT_TEAM: 8PFT9GXT36
+        ENABLE_HARDENED_RUNTIME: true
+        OTHER_CODE_SIGN_FLAGS: "--timestamp"
+        SWIFT_VERSION: "5.0"

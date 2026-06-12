@@ -65,6 +65,20 @@ System Settings → Screen Saver → BlackHoleSaver → **Options…**:
 - **Warp reach** — how far out the desktop visibly bends, in hole radii; the top of the range warps essentially the whole screen.
 - **Quality** — render scale. *Auto* (default) caps the render at 1800 rows, which is indistinguishable in motion and keeps 5K/6K displays fast; Full / 75% / 50% are manual overrides.
 
+## Break timer (menu bar helper)
+
+`BlackHoleTimer.app` is an optional menu bar companion: set a timer, and when it runs out the screensaver is forced on — a break reminder where the break actually happens, because your work falls into the hole.
+
+- Presets from 5 to 60 minutes, or **Custom…** for any duration; while running, the menu bar icon becomes a live countdown.
+- **Repeat** re-arms the timer after each break.
+- **Launch at Login** keeps it around.
+- **Show Black Hole Now** starts the screensaver immediately, no timer needed.
+- If the Mac slept past the deadline, it skips firing on wake instead of ambushing you the moment the lid opens.
+
+Install: download `BlackHoleTimer.app.zip` from [Releases](https://github.com/s0xDk/blackhole_screensaver_macos/releases), unzip, drop it in `/Applications`, open. It works by launching Apple's `ScreenSaverEngine`, so it starts whatever saver is selected in System Settings — with its usual permissions intact.
+
+Building from source: same steps as the saver, with `-scheme BlackHoleTimer`; the product is `BlackHoleTimer.app`.
+
 ## Credits
 
 - [Eric Bruneton's black hole shader](https://ebruneton.github.io/black_hole_shader/) — the rendering approach.
